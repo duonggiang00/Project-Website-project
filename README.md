@@ -330,5 +330,3 @@ Khi code, chỉ cần ấn biểu tượng "Watch Sass" ở phía dưới bên t
 - Các file chỉ dùng import, không đưa trực tiếp CSS vào file SCSS có dấu `_` ở đầu, tuy nhiên khi import sẽ bỏ dấu `_` đi.
 
 Nên tận dụng lợi thế lồng nhau của SCSS để viết code dễ dàng hơn, hiệu quả hơn. Tuy nhiên không nên lồng quá nhiều cấp độ để tránh việc khó bảo trì code.
-#   P r o j e c t - W e b s i t e - p r o j e c t  
- 
