@@ -183,8 +183,6 @@ h4,
 h5,
 h6 {
   font-weight: 800;
-<<<<<<< HEAD
-=======
 }
 
 header {
@@ -211,5 +209,4 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
->>>>>>> a26a5a9006038d1dfe3e52945ffc411b548fc4fd
 }
