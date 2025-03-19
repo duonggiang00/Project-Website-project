@@ -1,0 +1,111 @@
+
+.product-list{
+    font-family: "Poppins";
+    display: grid;
+    grid-template-columns: repeat(12,auto);
+    margin: 100px;
+    gap: 30px;
+    .product-box{
+        position: relative;
+        display: grid;
+        grid-row-gap: 8px;
+        grid-column: span 3;
+        min-height: 446px;
+        background-color: #F4F5F7;
+        overflow: hidden;
+        width: auto;
+    }
+    .overlay{
+        position: absolute;
+        background-color: rgb(58, 58, 58,0.72);
+        min-height: 446px;
+        width: 100%;
+        top:100%;
+        transition: all ease-in-out 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 24px;
+        button{
+            padding:12px 60px;
+            font-size: 16px;
+            font-weight: 600;
+            a{
+                color: #B88E2F;
+            }
+            
+            background-color: #fff;
+        }
+        .product-link{
+            display: flex;
+            gap: 20px;
+            a{
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+    }
+    .product-details:hover .overlay{
+        padding: 0;
+        top: 0;
+    }
+    .img-box{
+        width: 100%;
+        position: relative;
+        height: 301px;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        .sale{
+            background-color: #E97171;
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%,50%);
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    .product-details{
+        margin-top: 16px;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        height: auto;
+        h4{
+            padding: 0 16px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        p{  
+            padding: 0 16px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #898989;
+        }
+        h5{
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 20px;
+            font-weight: 600;
+            span{
+                text-decoration: line-through;
+                font-size: 16px;
+                color: #B0B0B0;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
