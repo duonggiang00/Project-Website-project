@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 1. 7-1 Pattern trong CSS
 
 ## 1. Giới thiệu về 7-1 Pattern
@@ -334,6 +335,8 @@ Nên tận dụng lợi thế lồng nhau của SCSS để viết code dễ dàn
 #   P r o j e c t - W e b s i t e - p r o j e c t  
  
 =======
+=======
+>>>>>>> 98062d2902e876d56aa70e2648b716f3203c5cc6
 # 1. 7-1 Pattern trong CSS
 
 ## 1. Giới thiệu về 7-1 Pattern
@@ -666,4 +669,7 @@ Khi code, chỉ cần ấn biểu tượng "Watch Sass" ở phía dưới bên t
 - Các file chỉ dùng import, không đưa trực tiếp CSS vào file SCSS có dấu `_` ở đầu, tuy nhiên khi import sẽ bỏ dấu `_` đi.
 
 Nên tận dụng lợi thế lồng nhau của SCSS để viết code dễ dàng hơn, hiệu quả hơn. Tuy nhiên không nên lồng quá nhiều cấp độ để tránh việc khó bảo trì code.
+<<<<<<< HEAD
 >>>>>>> a26a5a9006038d1dfe3e52945ffc411b548fc4fd
+=======
+>>>>>>> 98062d2902e876d56aa70e2648b716f3203c5cc6

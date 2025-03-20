@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -146,6 +147,12 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: "Poppins";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -183,33 +190,300 @@ h4,
 h5,
 h6 {
   font-weight: 800;
-<<<<<<< HEAD
-=======
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 1em;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100px;
+}
+header .icon-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 75px;
+}
+header ul li {
+  list-style: none;
+}
+header .icon-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 45px;
+}
+header a {
+  position: relative;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+header .icon-menu > a::before, header ul > li > a::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-color: #AD5727;
+  height: 3px;
+  width: 100%;
+  border-radius: 20px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+header ul > li > a::before {
+  bottom: -2px;
+}
+header a:hover::before, header a:hover {
+  color: #AD5727;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 footer {
-  background-color: #333;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+}
+footer .item:nth-child(1) {
+  grid-column: 1/3;
+}
+footer .item:nth-child(2) {
+  grid-column: 5/6;
+}
+footer .item:nth-child(3) {
+  grid-column: 7/9;
+}
+footer .item:nth-child(4) {
+  grid-column: 9/12;
+}
+footer .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.white-button {
+  padding: 12px 60px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #B88E2F;
+  background-color: #fff;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+.white-button a {
+  color: #B88E2F;
+}
+
+.white-button:hover {
+  background-color: #B88E2F;
+}
+.white-button:hover a {
   color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  margin-top: 20px;
-  position: relative;
-  bottom: 0;
+}
+
+.decor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột */
+  grid-gap: 10px; /* Khoảng cách giữa các ô */
   width: 100%;
-  z-index: 10;
+  max-width: 1200px; /* Điều chỉnh kích thước tối đa của grid */
+  margin: auto;
 }
-footer a {
+
+.col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px; /* Khoảng cách giữa các ảnh trong cùng một cột */
+}
+
+.decor-img {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.decor-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-list {
+  font-family: "Poppins";
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+  margin: 100px;
+  gap: 30px;
+}
+.product-list .product-box {
+  position: relative;
+  display: grid;
+  grid-row-gap: 8px;
+  grid-column: span 3;
+  min-height: 446px;
+  background-color: #F4F5F7;
+  overflow: hidden;
+  width: auto;
+}
+.product-list .overlay {
+  position: absolute;
+  background-color: rgba(58, 58, 58, 0.72);
+  min-height: 446px;
+  width: 100%;
+  top: 100%;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+.product-list .overlay .product-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.product-list .overlay .product-link a {
+  font-size: 16px;
   color: #fff;
-  text-decoration: none;
 }
-footer a:hover {
-  text-decoration: underline;
->>>>>>> a26a5a9006038d1dfe3e52945ffc411b548fc4fd
+.product-list .product-details:hover .overlay {
+  padding: 0;
+  top: 0;
+}
+.product-list .img-box {
+  width: 100%;
+  position: relative;
+  height: 301px;
+}
+.product-list .img-box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-list .img-box .sale {
+  background-color: #E97171;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  font-size: 16px;
+  font-weight: 500;
+}
+.product-list .product-details {
+  margin-top: 16px;
+  grid-row: span 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  height: auto;
+}
+.product-list .product-details h4 {
+  padding: 0 16px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.product-list .product-details p {
+  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #898989;
+}
+.product-list .product-details h5 {
+  padding: 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.product-list .product-details h5 span {
+  text-decoration: line-through;
+  font-size: 16px;
+  color: #B0B0B0;
+  font-weight: 400;
 }

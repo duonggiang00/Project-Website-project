@@ -1,0 +1,30 @@
+// .decor{
+//     width: 1800px;
+//     margin: 0 auto;
+//     display: grid;
+//     grid-template-columns: repeat(3,auto);
+  
+// }
+.decor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột */
+    grid-gap: 10px; /* Khoảng cách giữa các ô */
+    width: 100%;
+    max-width: 1200px; /* Điều chỉnh kích thước tối đa của grid */
+    margin: auto;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Khoảng cách giữa các ảnh trong cùng một cột */
+}
+.decor-img {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.decor-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
