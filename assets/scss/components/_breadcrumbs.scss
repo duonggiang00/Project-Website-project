@@ -1,0 +1,34 @@
+.breadcrumbs{
+  background-image: url(../scss/components/img/breadcrumbs/banner.png);
+  height: 316px;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1{
+    color: #000;
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .nav-links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .links>a{
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .active>a{
+    font-weight: 500;
+  }
+}

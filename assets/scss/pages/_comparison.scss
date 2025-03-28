@@ -1,0 +1,116 @@
+.comparison {
+    width: 100%;
+    .main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 0 100px;
+      align-items: center;
+      h3{
+        color: #000;
+        font-family: Poppins;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 126.5%; /* 35.42px */
+        }
+    }
+    .aside {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 47px;
+      height: 500px;
+      width: 100%;
+      h5 {
+        font-size: 25px;
+        color: gray;
+      }
+      .content1 {
+        height: 300px;
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 35px;
+        span {
+          font-size: 15px;
+          color: gray;
+        }
+        .review {
+          display: flex;
+    
+          align-items: center;
+          .review-detail {
+            display: flex;
+            align-items: center;
+            svg {
+              margin-left: 5px;
+            }
+            span {
+              margin-left: 10px;
+            }
+          }
+          .vertical-line {
+            width: 2px; /* Độ rộng của đường kẻ */
+            height: 20px; /* Chiều cao của đường kẻ */
+            background-color: #ccc; /* Màu sắc của đường kẻ */
+            display: inline-block; /* Hoặc display: block; tùy thuộc vào cách bạn muốn nó hiển thị */
+            transform: rotate(180deg); /* Xoay 90 độ để tạo thành đường kẻ dọc */
+          }
+        }
+        hr {
+          width: 115px;
+        }
+        .font {
+          margin-left: 25px;
+        }
+      }
+      select {
+        width: 242px;
+        height: 39px;
+        background-color: #b88e2f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+    table {
+      width: 100%;
+      margin-left: 100px;
+      border-collapse: collapse;
+      border-top: 1px solid #e8e8e8;
+      tr {
+        td {
+          border-top: none;
+          border-bottom: none;
+          border-right: 1px solid #e8e8e8;
+          padding: 20px 10px 20px 50px;
+          p {
+            font-size: 20px;
+          }
+          button {
+            background-color: #b88e2f;
+            padding: 10px 20px;
+            border: none;
+            color: #fff;
+          }
+        }
+        td:nth-child(4) {
+          border-right: none;
+        }
+        td:nth-child(1) {
+          width: 350px;
+        }
+        td:nth-child(2) {
+          width: 350px;
+        }
+        td:nth-child(3) {
+          width: 350px;
+        }
+      }
+    }
+  }
+  
+  
+  
+  
+  

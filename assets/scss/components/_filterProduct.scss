@@ -1,0 +1,45 @@
+.filterProduct{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: #F9F1E7;
+    padding: 0 100px;
+    .filter-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        .result::before{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 40px; /* Điều chỉnh chiều cao */
+            background: #9F9F9F;
+            margin-right: 10px;
+        }
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        li{
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            cursor: pointer;
+            input{
+                width: 55px;
+                height: 55px;
+                border: none;
+                text-align: center;
+            }
+            select{
+                height: 55px;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+}

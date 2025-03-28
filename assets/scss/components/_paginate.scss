@@ -1,0 +1,22 @@
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    gap: 38px;
+    button{
+        padding: 15px 27px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: var(--Primary, #F9F1E7);
+        transition: all ease-in-out 0.3s;
+        border: none;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    button:hover{
+        background-color:#B88E2F;
+        color: white;
+    }
+}

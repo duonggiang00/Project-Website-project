@@ -1,0 +1,32 @@
+.services{
+    width: 100%;
+    background: #FAF3EA;
+    padding: 100px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .col{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .service-detail{
+            h5{
+                color: #242424;
+                font-family: Poppins;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%; /* 37.5px */
+                margin-bottom: 10px;
+            }
+            p{
+                color: var(--Color-Gray-3, #898989);
+                font-family: Poppins;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%; /* 30px */
+            }
+        }
+    }
+}

@@ -1,30 +1,60 @@
-// .decor{
-//     width: 1800px;
-//     margin: 0 auto;
-//     display: grid;
-//     grid-template-columns: repeat(3,auto);
-  
-// }
 .decor {
+    width: 1800px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột */
-    grid-gap: 10px; /* Khoảng cách giữa các ô */
+    
+    gap: 16px;
+    position: absolute;
+    // animation: slide 10s linear infinite alternate;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300px);
+    }
+  }
+  .decor-img:nth-child(1) {
+    grid-area: 1 / 1 / 4 / 3;
+  }
+  
+  .decor-img:nth-child(2) {
+    grid-area: 4 / 1 / 16 / 4;
+  }
+  
+  .decor-img:nth-child(3) {
+    grid-area: 2 / 3 / 4 / 6;
+  }
+  
+  .decor-img:nth-child(4) {
+    grid-area: 10 / 4 / 4 / 6;
+  }
+  
+  .decor-img:nth-child(5) {
+    grid-area: 3 / 6 / 5 / 8;
+  }
+  
+  .decor-img:nth-child(6) {
+    grid-area: 2 / 8 / 4 / 10;
+  }
+  
+  .decor-img:nth-child(7) {
+    grid-area: 1 / 10 / 4 / 13;
+  }
+  
+  .decor-img:nth-child(8) {
+    grid-area: 4 / 8 / 12 / 8;
+  }
+  
+  .decor-img:nth-child(9) {
+    grid-area: 4 / 9 / 5 / 13;
+  }
+  .decor-img{
+    align-content: stretch;
+  }
+  img {
     width: 100%;
-    max-width: 1200px; /* Điều chỉnh kích thước tối đa của grid */
-    margin: auto;
-}
-.col {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Khoảng cách giữa các ảnh trong cùng một cột */
-}
-.decor-img {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-.decor-img img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+    height: 100%;
+    border-radius: 1px;
+    object-fit: cover;
+  }
