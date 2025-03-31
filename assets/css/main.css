@@ -194,11 +194,12 @@ h6 {
 
 .container {
   width: 100vw;
+  overflow: hidden;
   margin: 0 auto;
 }
 
 header {
-  max-width: 1440px;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,6 +209,11 @@ header {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   height: 100px;
+}
+header h1 {
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
 }
 header .icon-title {
   display: -webkit-box;
@@ -251,9 +257,6 @@ header .icon-menu label svg {
   cursor: pointer;
 }
 header .icon-menu label .search-box {
-  display: none;
-}
-header .icon-menu label #search-icon:checked ~ .search-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,21 +270,35 @@ header .icon-menu label #search-icon:checked ~ .search-box {
   padding: 0 10px;
   bottom: -50px;
   border-radius: 10px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: -webkit-transform ease-in-out 0.3;
+  transition: -webkit-transform ease-in-out 0.3;
+  transition: transform ease-in-out 0.3;
+  transition: transform ease-in-out 0.3, -webkit-transform ease-in-out 0.3;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
-header .icon-menu label #search-icon:checked ~ .search-box form {
+header .icon-menu label .search-box form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-header .icon-menu label #search-icon:checked ~ .search-box form input {
+header .icon-menu label .search-box form input {
   font-size: 20px;
   border: none;
   outline: none;
   background-color: #E8E8E8;
 }
-header .icon-menu label #search-icon:checked ~ .search-box form button {
+header .icon-menu label .search-box form button {
   border: none;
   background: none;
+}
+header .icon-menu label #search-icon:checked ~ .search-box {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 header a, header .icon-menu > ul > li {
   position: relative;
@@ -608,13 +625,59 @@ footer .menu-column:nth-child(4) .newsletter-box input, footer .menu-column:nth-
   font-weight: 600;
 }
 
-.decor {
-  width: 1800px;
+.collection {
   display: grid;
-  gap: 16px;
-  position: absolute;
+  grid-template-columns: 1fr 0.4fr 1fr;
+  width: 125%;
+  margin-bottom: 50px;
+  grid-gap: 16px;
+  -webkit-animation: slide 10s linear infinite alternate;
+          animation: slide 10s linear infinite alternate;
 }
-
+.collection .col {
+  display: grid;
+  grid-gap: 16px;
+}
+.collection .col .img-box {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.collection .col .img-box img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.collection .col .b1 {
+  grid-area: 1/1/4/3;
+}
+.collection .col .b2 {
+  grid-area: 2/3/4/7;
+}
+.collection .col .b3 {
+  grid-area: 4/1/7/4;
+}
+.collection .col .b4 {
+  grid-area: 4/4/5/7;
+}
+.collection .col .b6 {
+  grid-area: 4/1/5/4;
+}
+.collection .col .b7 {
+  grid-area: 1/4/5/8;
+}
+.collection .col .b8 {
+  grid-area: 5/1/8/3;
+}
+.collection .col .b9 {
+  grid-area: 5/3/6/5;
+}
+.collection .col:nth-child(2) .b5 {
+  max-width: 100%;
+  max-height: 70%;
+  grid-row: 2/4;
+}
 @-webkit-keyframes slide {
   0% {
     -webkit-transform: translateX(0);
@@ -624,6 +687,47 @@ footer .menu-column:nth-child(4) .newsletter-box input, footer .menu-column:nth-
     -webkit-transform: translateX(-300px);
             transform: translateX(-300px);
   }
+}
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+}
+
+.collection-title {
+  margin-top: 40px;
+  place-self: center;
+  text-align: center;
+}
+.collection-title p {
+  color: var(--Color-Gray-2, #616161);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 30px */
+}
+.collection-title h3 {
+  color: var(--Color-Gray-1, #3A3A3A);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 48px */
+}
+
+.decor {
+  width: 1800px;
+  display: grid;
+  gap: 16px;
+  position: absolute;
 }
 
 @keyframes slide {

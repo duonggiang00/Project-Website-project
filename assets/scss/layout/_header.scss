@@ -1,9 +1,14 @@
 header{
-    max-width: 1440px;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100px;
+    h1{
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 700;
+    }
     .icon-title{
         display: flex;
         align-items: center;
@@ -28,9 +33,6 @@ header{
             }
             position: relative;
             .search-box{
-                display: none;
-            }
-            #search-icon:checked ~ .search-box{
                 display: flex;
                 align-items: center;
                 position: absolute;
@@ -40,6 +42,9 @@ header{
                 padding: 0 10px;
                 bottom: -50px;
                 border-radius: 10px;
+                transform: scaleY(0);
+                transition: transform ease-in-out 0.3;
+                transform-origin: top;
                 form{
                     display: flex;
                     input{
@@ -53,6 +58,10 @@ header{
                         background: none;
                     }
                 }
+            }
+            #search-icon:checked ~ .search-box{
+                transform: scaleY(1);
+                transform-origin: bottom;
             }
             
         }
